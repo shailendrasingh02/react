@@ -24,15 +24,15 @@ function App(){
              {
             student.map((data,i)=>
                
-            <tr key={i}>
-                <td>{i+1}</td>
+            <tr key={i+1}>
+                <td>{i}</td>
                 <td>{data.name}</td>
                 <td>{data.email}</td>
                 <td>{data.contact}</td>
-                <td>{data.address.map((item)=>
+                <td>{data.address.map((item,i)=>
                 <Table striped  variant='dark'>
                     <tbody>
-                        <tr>
+                        <tr key={i}>
                             <td>{item.Hn}</td>
                             <td>{item.city}</td>
                             <td>{item.country}</td>
